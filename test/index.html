@@ -3,14 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	<title>test</title>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+
+	<style>
+		#books img {
+			width: 500px;
+			height: 400px;
+		}
+	</style>
+
+	<script>
+		$(function () {
+			var $books = $("#books");
+			$books.cycle({
+				timeout:1
+			});
+
+			$books.hover(function () {
+				$books.cycle('pause');
+			}, function () {
+				$books.cycle('resume');
+			});
+
+		});
+	</script>
 </head>
 <body>
 <ul id="books">
 	<li>
-		<img src="xx.jpg" alt="冥王星">
-		<div class="title">冥王星</div>
-		<div class="author">冥王星</div>
+		<img src="a1.jpg" alt="a1">
+	</li>
+	<li>
+		<img src="a2.jpg" alt="a2">
 	</li>
 </ul>
+<button id="pause">pause</button>
+<iframe style="height: 0;border: 0;" src="http://music.163.com/outchain/player?type=0&id=68112612&auto=1"></iframe>
 </body>
 </html>
