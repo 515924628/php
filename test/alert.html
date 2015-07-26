@@ -3,19 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<style>
+	</style>
 	<script>
-		function fun(){
+		function popLayer(element) {
+			element.style.margin = "auto";
 			var tab = document.body.appendChild(document.createElement("table"));
+			tab.style.borderCollapse = "collapse";
+			tab.style.position = "fixed";
+			tab.style.top = 0;
+			tab.style.left = 0;
+			tab.style.width = "100%";
+			tab.style.height = "100%";
+			tab.style.textAlign = "center";
+			tab.appendChild(document.createElement("tr"))
+					.appendChild(document.createElement("td"))
+					.appendChild(element);
 		}
 	</script>
 </head>
 <body>
-<table style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.1);">
-	<tr>
-		<td>
-			<div style="width: 400px;height: 300px;background-color:blue;margin:auto;"></div>
-		</td>
-	</tr>
-</table>
 </body>
 </html>
