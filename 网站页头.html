@@ -6,41 +6,74 @@
 <div class="dvlogin">
 	<ul class="u1 list-paddingleft-2">
 		<li>
-			<p>
+			<div>
 				<a href="http://mng.hndevin.cn/">登录</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				|
-			</p>
-		</li>
-		<li>
-			<p>
-				<a href="http://mng.hndevin.cn/reg.php" target="_blank">注册</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				&nbsp;<a href="#" id="weixin"><img
-					src="http://img4.ev123.com/ev_user_module_content_tmp/2015_03_15/tmp1426416972_795006_s.jpg"
-					alt="微信" title="微信"/></a>
-			</p>
-
-			<div class="wei_img">
-				<img src="#" width="116px" height="116px"/>
 			</div>
 		</li>
 		<li>
-			<p>
+			<div>
+				|
+			</div>
+		</li>
+		<li>
+			<div>
+				<a href="http://mng.hndevin.cn/reg.php" target="_blank">注册</a>
+			</div>
+		</li>
+		<li id="weixin">
+			<div id="wx">
+				<a href="#">
+					<img src="http://img4.ev123.com/ev_user_module_content_tmp/2015_03_15/tmp1426416972_795006_s.jpg" alt="微信"/>
+				</a>
+
+				<div id="wx_img">
+					<img src="http://aliimg001.ev123.com/ueditor/image/446/890445/1437194002413036.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div>
 				<a href="http://weibo.com/hndevin" target="_blank"><img
 						src="http://img4.ev123.com/ev_user_module_content_tmp/2015_03_15/tmp1426416940_795006_s.jpg"
 						alt="微博" title="微博"/></a>
-			</p>
+			</div>
 		</li>
 	</ul>
 </div>
 <style>
+	.logo, .header {
+		overflow: visible;
+	}
+
+	#weixin {
+		width: 28px;
+	}
+
+	#wx {
+		width: 28px;
+		height: 28px;
+		position: absolute;
+	}
+
+	#wx_img {
+		display: none;
+		position: absolute;
+		left: -56px;
+		background: url(http://img3.ev123.com/other1196/ewm.png) no-repeat scroll left top;
+		width: 116px;
+		height: 116px;
+		padding: 16px 9px 9px;
+	}
+
+	#wx_img img {
+		width: 120px;
+		height: 120px;
+	}
+
+	#wx:hover #wx_img {
+		display: block;
+	}
+
 	.u1 {
 		list-style-type: none;
 	}

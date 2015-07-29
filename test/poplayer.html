@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script>
+		$.fn.myHoverTip = function (divId) {
+			var div = $("#" + divId); //要浮动在这个元素旁边的层
+			div.css("position", "absolute");//让这个层可以绝对定位
+			div.css("display", "none");
+			var self = $(this); //当前对象
+			self.hover(function () {
+						div.css("display", "block");
+						var p = self.position(); //获取这个元素的left和top
+						var x = p.left + self.width();//获取这个浮动层的left
+						div.css("left", x);
+						div.css("top", p.top);
+						div.show();
+					},
+					function () {
+						div.css("display", "none");
+					}
+			);
+			return this;
+		};
+		$(document).ready(function () {
+			$("#a").myHoverTip("dd");
+		})
+	</script>
+</head>
+<body>
+
+<a href="#">a</a>
+<a href="#" id="a">
+	<img src="http://img4.ev123.com/ev_user_module_content_tmp/2015_03_15/tmp1426416972_795006_s.jpg" alt="">
+</a>
+<a href="#">b</a>
+
+<div id="dd">
+	<img src="http://aliimg001.ev123.com/ueditor/image/446/890445/1437194002413036.jpg" alt="">
+</div>
+
+</body>
+</html>
